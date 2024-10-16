@@ -27,47 +27,89 @@ export default function DemoPage() {
     { title: "Somebody Save Me", src: "/music/19.mp3" },
   ];
 
-  // State to manage the currently selected song
-
-  const [currentSong, setCurrentSong] = useState(songs[0].src);
-
-  // React Hook Form setup
-
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const { register, handleSubmit } = useForm();
 
-  // Handle form submission and set the selected song
+  const currentSong = songs[currentSongIndex].src;
 
+  // Handle form submission to play selected song
   const onSubmit = (data) => {
-    setCurrentSong(data.song); // Update current song based on the user's selection
+    const selectedIndex = songs.findIndex((song) => song.src === data.song);
+    if (selectedIndex !== -1) {
+      setCurrentSongIndex(selectedIndex);
+    }
+  };
+
+  // Function to handle skipping to the next song
+  const handleClickNext = () => {
+    setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+  };
+
+  // Function to handle skipping to the previous song
+  const handleClickPrevious = () => {
+    setCurrentSongIndex((prevIndex) =>
+      prevIndex === 0 ? songs.length - 1 : prevIndex - 1
+    );
   };
 
   return (
-    <div className="App">
-      <h1>Select and Play a Song</h1>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="transform scale-150 max-w-4xl w-full">
+        {" "}
+        {/* Apply scale and width */}
+        <div className="bg-white p-10 rounded-lg shadow-lg">
+          <h1 className="text-2xl font-bold mb-6 text-center">
+            Select and Play a Song
+          </h1>
 
-      {/* Form to select a song */}
+          {/* Form to select a song */}
+          <form onSubmit={handleSubmit(onSubmit)} className="mb-6">
+            <label
+              htmlFor="song"
+              className="block mb-3 text-lg font-medium text-gray-700"
+            >
+              Choose a Song:
+            </label>
+            <select
+              {...register("song")}
+              className="w-full p-3 mb-4 border rounded-lg border-gray-300"
+            >
+              {songs.map((song, index) => (
+                <option key={index} value={song.src}>
+                  {song.title}
+                </option>
+              ))}
+            </select>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 text-lg"
+            >
+              Play
+            </button>
+          </form>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="song">Choose a Song:</label>
-        <select {...register("song")}>
-          {songs.map((song, index) => (
-            <option key={index} value={song.src}>
-              {song.title}
-            </option>
-          ))}
-        </select>
-        <button type="submit">Play</button>
-      </form>
+          {/* Now Playing Section */}
+          <div className="mt-4 text-center">
+            <p className="text-xl font-semibold text-gray-700">Now Playing:</p>
+            <p className="text-xl text-blue-500">
+              {songs[currentSongIndex].title}
+            </p>
+          </div>
 
-      {/* Audio player that plays the selected song */}
-
-      <AudioPlayer
-        autoPlay
-        src={currentSong}
-        // Set the selected song as the source
-
-        onPlay={() => console.log("Playing:", currentSong)}
-      />
+          {/* Audio player with skip buttons and increased size */}
+          <div className="mt-6">
+            <AudioPlayer
+              autoPlay
+              src={currentSong}
+              showSkipControls
+              onClickNext={handleClickNext} // Handle clicking next
+              onClickPrevious={handleClickPrevious} // Handle clicking previous
+              className="mt-4"
+              onPlay={() => console.log("Playing:", currentSong)}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
