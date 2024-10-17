@@ -6,7 +6,7 @@ export default function info() {
       <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10">
         How to install, benefits & use-cases{" "}
       </h1>
-      <div className="flex h-screen items-center justify-evenly mt-[-100px] text-l">
+      <div className="flex text-2xl h-screen items-center justify-evenly mt-[-100px] text-l">
         <div className=" bg-white p-10 rounded-lg shadow-2xl">
           <h2 className="text-2xl pb-3 text-center">React Hook Form</h2>
           <ul className="font-bold">Installation</ul>
