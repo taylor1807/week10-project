@@ -2,10 +2,10 @@ import Link from "next/link"
 
 export default function info() {
     return (
-        <div className="bg-gray-100">
-            <h1 className=" text-4xl pt-[100px] text-center">How to install, benefits & use-cases </h1>
+        <div className="bg-gray-100 p-10">
+            <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10">How to install, benefits & use-cases </h1>
             <div className=" flex h-screen items-center justify-evenly mt-[-100px]"> 
-                <div className=" bg-white p-10 rounded-lg shadow-lg">React Hook Form
+                <div className=" bg-white p-10 rounded-lg shadow-2xl">React Hook Form
                     <ul >Installation</ul>
                         <li>npm install react-hook-form</li>
                         <li><code>import {'{'} useForm {'}'} from "react-hook-form";</code></li>    
@@ -21,7 +21,7 @@ export default function info() {
                         <li>Custom Input Components</li>
                         <li>Form with Async Validation</li>
                 </div>
-                <div className=" bg-white p-10 rounded-lg shadow-lg">
+                <div className=" bg-white p-10 rounded-lg shadow-2xl">
                 React H5 Audio Player
                 <ul>Installation</ul>
                         <li>npm i react-h5-audio-player</li>
