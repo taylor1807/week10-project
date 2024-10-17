@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Description",
+  description: "Week 10 Research App by Magda & Jonathan",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function DescriptionPage() {
   return (
     <div className="bg-gray-100 p-10">
