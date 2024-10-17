@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function welcome() {
+
   return (
     <div className="bg-gray-100 p-10">
       <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10">
