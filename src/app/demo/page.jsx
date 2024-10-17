@@ -77,7 +77,7 @@ export default function DemoPage() {
             </select>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 text-lg"
+              className="w-full bg-cyan-400 text-white py-3 rounded-lg hover:bg-blue-600 text-lg"
             >
               Play
             </button>
