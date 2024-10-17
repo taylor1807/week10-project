@@ -10,12 +10,14 @@ export default function DescriptionPage() {
       <div className="bg-stone-300 p-8 rounded-lg shadow-2xl mb-10">
         <div className="grid grid-cols-2 gap-6">
           <Image
+            className="shadow-2xl"
             src="/images/FormDemo.png"
             width={600}
             height={600}
             alt="screenshot of a demo of what the form does"
           />
           <Image
+            className="shadow-2xl"
             src="/images/formspecs.png"
             width={800}
             height={800}
@@ -34,12 +36,14 @@ export default function DescriptionPage() {
       <div className="bg-stone-300 p-8 rounded-lg shadow-2xl">
         <div className="grid grid-cols-2 gap-6">
           <Image
+            className="shadow-2xl"
             src="/images/audioHome.png"
             width={400}
             height={400}
             alt="screenshot of the audio player home page"
           />
           <Image
+            className="shadow-2xl"
             src="/images/audiocustiom.png"
             width={600}
             height={600}
