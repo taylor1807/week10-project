@@ -9,18 +9,34 @@ export default function decriptionPage() {
       </div>
       <div>
         <Image
-          src="/images/figma.png"
+          src="/images/FormDemo.png"
           width={400}
           height={400}
-          alt="figma screenshot"
+          alt="screenshot of a demo of what the form does"
         />
       </div>
       <div>
         <Image
-          src="/images/figma.png"
+          src="/images/formspecs.png"
           width={400}
           height={400}
-          alt="figma screenshot"
+          alt="screenshot of the specs of the form package"
+        />
+      </div>
+      <div>
+        <Image
+          src="/images/audioHome.png"
+          width={400}
+          height={400}
+          alt="screenshot of the audio player home page"
+        />
+      </div>
+      <div>
+        <Image
+          src="/images/audiocustiom.png"
+          width={400}
+          height={400}
+          alt="screenshot of the audio player customizations"
         />
       </div>
       <div>
