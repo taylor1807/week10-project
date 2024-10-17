@@ -7,18 +7,18 @@ export default function DescriptionPage() {
       <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10 mb-10">
         React H5 Audioplayer and React Hook Form
       </h1>
-      <div className="bg-white p-8 rounded-lg shadow-2xl mb-10">
+      <div className="bg-stone-300 p-8 rounded-lg shadow-2xl mb-10">
         <div className="grid grid-cols-2 gap-6">
           <Image
             src="/images/FormDemo.png"
-            width={400}
-            height={400}
+            width={600}
+            height={600}
             alt="screenshot of a demo of what the form does"
           />
           <Image
             src="/images/formspecs.png"
-            width={400}
-            height={400}
+            width={800}
+            height={800}
             alt="screenshot of the specs of the form package"
           />
         </div>
@@ -31,7 +31,7 @@ export default function DescriptionPage() {
           </Link>
         </div>
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-2xl">
+      <div className="bg-stone-300 p-8 rounded-lg shadow-2xl">
         <div className="grid grid-cols-2 gap-6">
           <Image
             src="/images/audioHome.png"
@@ -41,8 +41,8 @@ export default function DescriptionPage() {
           />
           <Image
             src="/images/audiocustiom.png"
-            width={400}
-            height={400}
+            width={600}
+            height={600}
             alt="screenshot of the audio player customizations"
           />
         </div>
