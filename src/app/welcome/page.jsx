@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function welcome() {
     return (
         <div className="bg-gray-100 p-10">
-                <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10">Week 10 Research Project</h1>
+                <h1 className="bg-blue-900 text-ls rounded text-4xl text-white text-center shadow-2xl p-10">Planning & Communication</h1>
             <div className="flex h-screen items-center justify-evenly gap-4 mt-[-100px]">
                 <div className="bg-white p-8 rounded-lg shadow-2xl">
                     <h2 className="text-center text-2xl pb-4">Figma</h2>
