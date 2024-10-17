@@ -1,4 +1,11 @@
 import Link from "next/link";
+export const metadata = {
+  title: "Information",
+  description: "Week 10 Research App by Magda & Jonathan",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function info() {
   return (
@@ -13,7 +20,7 @@ export default function info() {
           <li>npm install react-hook-form</li>
           <li>
             <code>
-              import {"{"}useForm{"}"} from "react-hook-form";
+              import {"{"}useForm{"}"} from &quot;react-hook-form&quot;;
             </code>
           </li>
           <ul className="font-bold">Benefits</ul>
@@ -34,8 +41,8 @@ export default function info() {
           <h2 className="text-2xl pb-3 text-center">React H5 Audio Player</h2>
           <ul className="font-bold">Installation</ul>
           <li>npm i react-h5-audio-player</li>
-          <li>import AudioPlayer from "react-h5-audio-player";</li>
-          <li>import "react-h5-audio-player/lib/styles.css";</li>
+          <li>import AudioPlayer from &quot;react-h5-audio-player&quot;;</li>
+          <li>import &quot;react-h5-audio-player/lib/styles.css&quot;;</li>
           <ul className="font-bold">Benefits</ul>
           <li>Simplified Implementation</li>
           <li>Cross-browser Consistency</li>
