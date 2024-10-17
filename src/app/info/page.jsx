@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function info() {
     return (
@@ -42,6 +42,6 @@ export default function info() {
                 </div>
             </div>
             <Link className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors absolute bottom-5 right-5 text-2xl" href="/demo">Next Page</Link>  
-        </div>
-    )
+    </div>
+  );
 }
