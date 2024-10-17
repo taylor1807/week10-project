@@ -32,7 +32,6 @@ export default function DemoPage() {
 
   const currentSong = songs[currentSongIndex].src;
 
-  // Handle form submission to play selected song
   const onSubmit = (data) => {
     const selectedIndex = songs.findIndex((song) => song.src === data.song);
     if (selectedIndex !== -1) {
@@ -40,12 +39,10 @@ export default function DemoPage() {
     }
   };
 
-  // Function to handle skipping to the next song
   const handleClickNext = () => {
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
   };
 
-  // Function to handle skipping to the previous song
   const handleClickPrevious = () => {
     setCurrentSongIndex((prevIndex) =>
       prevIndex === 0 ? songs.length - 1 : prevIndex - 1
@@ -56,13 +53,11 @@ export default function DemoPage() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="transform scale-150 max-w-4xl w-full">
         {" "}
-        {/* Apply scale and width */}
         <div className="bg-white p-10 rounded-lg shadow-lg">
           <h1 className="text-2xl font-bold mb-6 text-center">
             Select and Play a Song
           </h1>
 
-          {/* Form to select a song */}
           <form onSubmit={handleSubmit(onSubmit)} className="mb-6">
             <label
               htmlFor="song"
@@ -88,7 +83,6 @@ export default function DemoPage() {
             </button>
           </form>
 
-          {/* Now Playing Section */}
           <div className="mt-4 text-center">
             <p className="text-xl font-semibold text-gray-700">Now Playing:</p>
             <p className="text-xl text-blue-500">
@@ -96,14 +90,14 @@ export default function DemoPage() {
             </p>
           </div>
 
-          {/* Audio player with skip buttons and increased size */}
           <div className="mt-6">
             <AudioPlayer
-              autoPlay
+              // autoPlay
               src={currentSong}
               showSkipControls
-              onClickNext={handleClickNext} // Handle clicking next
-              onClickPrevious={handleClickPrevious} // Handle clicking previous
+              onClickNext={handleClickNext}
+              onClickPrevious={handleClickPrevious}
+              previous
               className="mt-4"
               onPlay={() => console.log("Playing:", currentSong)}
             />
